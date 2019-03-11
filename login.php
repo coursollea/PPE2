@@ -25,14 +25,16 @@
 			
 		
 			</form>
-		<?php
+		<?php/*
 		if(isset($_POST['password']))
 		{
 			login();
 		}
-		
+		*/
 		?>
 		</div>
 
 	</body>
+</html>
+	
 	
