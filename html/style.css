@@ -1,0 +1,58 @@
+body
+{
+	padding : 0;
+	margin : 0;
+}
+
+.header ul
+{
+	padding : 0;
+	margin : 0;
+	text-align : center;
+}
+
+.header
+{
+	background-color : #0f254c;
+}
+.header ul:after
+{
+	content : '';
+	display : block;
+	clear : both;
+}
+
+.header > ul > li
+{
+	float : right;
+	list-style-type : none;
+	color : white;
+}
+
+.header > ul > li > a
+{
+	display : inline-block;
+	padding : 15px 25px;
+	transition : background-color 0.5s;
+	cursor : pointer;
+}
+
+.header > ul > li > a:hover
+{
+	background-color : #213b68;
+	border-top : 3px solid white;
+	padding : 12px 25px 15px 25px;
+	animation : headerButtonClignote 1s alternate infinite;
+}
+
+@keyframes headerButtonClignote
+{
+	0%
+	{
+		background-color : #213b68;
+	}
+	100%
+	{
+		background-color : #395789;
+	}
+}
