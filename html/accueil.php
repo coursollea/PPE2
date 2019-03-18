@@ -3,7 +3,8 @@
 <?php include('dbFunctions.php');
 		session_start();
 		if(isset($_GET['deco']))
-			disconnect();?>
+			disconnect();
+?>
 
 <html>
 	<head>
@@ -100,7 +101,7 @@
 						if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
 					
-						?>
+					?>
 				
 			</article>
 	</body>
