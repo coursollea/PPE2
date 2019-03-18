@@ -22,46 +22,45 @@
 				<li><a> Général </a></li>
 				<li><a> Jeu vidéo ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a> PC </a></li>
-						<li><a> PS4 </a></li>
-						<li><a> ONE </a></li>
-						<li><a> Switch </a></li>
-						<li><a> Rétro </a></li>
+						<li ><a href='pageWeb.php?categorie=PC'> PC </a></li>
+						<li><a href='pageWeb.php?categorie=PS4'> PS4 </a></li>
+						<li><a href='pageWeb.php?categorie=ONE'> ONE </a></li>
+						<li><a href='pageWeb.php?categorie=Switch'> Switch </a></li>
+						<li><a href='pageWeb.php?categorie=Rétro'> Rétro </a></li>
 					</ul>
 				</li>
 				<li><a> Musique ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a> Hip-Hop </a></li>
-						<li><a> Rock </a></li>
-						<li><a> Electro </a></li>
-						<li><a> Variété </a></li>
-						<li><a> Autre </a></li>
+						<li><a href='pageWeb.php?categorie=Hip-Hop'> Hip-Hop </a></li>
+						<li><a href='pageWeb.php?categorie=Rock'> Rock </a></li>
+						<li><a href='pageWeb.php?categorie=Electro'> Electro </a></li>
+						<li><a href='pageWeb.php?categorie=Variété'> Variété </a></li>
+						<li><a href='pageWeb.php?categorie=Autre'> Autre </a></li>
 					</ul>
 				</li>
 				<li><a> Films ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a> Action </a></li>
-						<li><a> Comédie </a></li>
-						<li><a> Dramatique </a></li>
-						<li><a> Animé </a></li>
-						<li><a> Porno </a></li>
+						<li><a href='pageWeb.php?categorie=Action'> Action </a></li>
+						<li><a href='pageWeb.php?categorie=Comédie'> Comédie </a></li>
+						<li><a href='pageWeb.php?categorie=Dramatique'> Dramatique </a></li>
+						<li><a href='pageWeb.php?categorie=Animé'> Animé </a></li>
+						<li><a href='pageWeb.php?categorie=Porno'> Porno </a></li>
 					</ul>
 				</li>
 				<li><a> Développement ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a> C++ </a></li>
-						<li><a> Java </a></li>
-						<li><a> SQL </a></li>
-						<li><a> PHP </a></li>
-						<li><a> HTML/CSS </a></li>
-						<li><a> JavaScript </a></li>
-						<li><a> Python </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> C++ </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> Java </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> SQL </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> PHP </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> HTML/CSS </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> JavaScript </a></li>
+						<li><a href='pageWeb.php?categorie=PC'> Python </a></li>
 					</ul>
 				</li>
 					
 			</ul>
 		</nav>
-		
 		
 		<form class = "inscriptionForm" >
 			<br/>

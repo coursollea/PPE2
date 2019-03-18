@@ -1,6 +1,6 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<?php include('dbFunctions.php');
+<?php include('fonctionPage.php');
 		session_start();
 		if(isset($_GET['deco']))
 			disconnect();?>
@@ -93,7 +93,7 @@
 			</ul>
 		</nav>
 			<article>
-				<h1> Accueil </h1>
+				<h1>	<?php if(isset($_GET["categorie"])){ echo LocalisePage($_GET["categorie"]);}?></h1>
 					
 					<?php 
 						
@@ -107,4 +107,4 @@
 </html>
 
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
-<script src = 'accueilButtons.js'></script>
+<script src = 'pageWeb.js'></script>
