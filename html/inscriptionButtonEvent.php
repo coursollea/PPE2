@@ -12,7 +12,7 @@
 			}
 			else
 			{
-				echo -0;
+				echo 0;
 			}
 		}
 		else
