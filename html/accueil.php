@@ -56,7 +56,7 @@
 					<ul class = 'sousmenu'>
 						<li ><a href='pageWeb.php?categorie=PC'> PC </a></li>
 						<li><a href='pageWeb.php?categorie=PS4'> PS4 </a></li>
-						<li><a href='pageWeb.php?categorie=ONE'> XBOX ONE </a></li>
+						<li><a href='pageWeb.php?categorie=ONE'> ONE </a></li>
 						<li><a href='pageWeb.php?categorie=Switch'> Switch </a></li>
 						<li><a href='pageWeb.php?categorie=Rétro'> Rétro </a></li>
 					</ul>
