@@ -487,3 +487,10 @@ article div
 	border-radius : 50%;
 	color : white;
 }
+
+img
+{
+	max-width:100px;
+	max-height:100px;
+
+}

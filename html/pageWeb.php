@@ -92,7 +92,7 @@
 					
 			</ul>
 		</nav>
-			<article>
+			<div>
 				<h1>	<?php if(isset($_GET["categorie"])){ echo LocalisePage($_GET["categorie"]);}?></h1>
 					
 					<?php 
@@ -104,14 +104,28 @@
 						
 			<div class="article">
 				<div class="sujetDiv">
-				<img src="pauvre_gosse.jpg">
-			
+				
+				
+					
+					<img src="../img/pauvre_gosse.jpg">
+			      
+				   
+				   
+				   <div class="articleDiv">
+						<p> 
+						<ul>
+							<h1>jacquiDu63</h1>
+							<li> je suis fier de la nouvelle coup de jacquiJR, c'est ma fiérté </li>
+						</ul>
+						</p>
+			       </div>
+				   
 				
 				</div>
 			
 			</div>
 				
-			</article>
+			</div>
 	</body>
 </html>
 
