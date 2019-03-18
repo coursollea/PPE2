@@ -107,4 +107,4 @@
 </html>
 
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
-<script src = 'pageWeb.js'></script>
+<script src = 'accueilButtons.js'></script>
