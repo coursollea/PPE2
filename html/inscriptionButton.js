@@ -20,17 +20,17 @@ $('#inscription_submit').on('click', function(event)
 			console.log(retour);
 			if(retour <= 0)
 			{
-				
+				event.preventDefault();
 			}
 			else
 			{
-				activable = 1;
+				
 			}
 		}
 		
 	});
 	
-	event.preventDefault();
+	
 	
 	
 });

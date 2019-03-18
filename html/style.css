@@ -160,6 +160,12 @@ h1
 	border-bottom : none;
 	cursor : pointer;
 	font-size : 0.9em;
+	color : white;
+}
+
+.subNav a:visited
+{
+	color : white;
 }
 
 .subNav .menu > li:hover
