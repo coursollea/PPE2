@@ -25,7 +25,7 @@
 					<li><a><?php echo $_SESSION['username'];?> ▼</a>
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnexion</a></li>
-							<li><a>Mon compte</a></li>
+							<li><a id="compteLink">Mon compte</a></li>
 						</ul>
 					</li> 
 					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
@@ -106,3 +106,4 @@
 
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
 <script src = '../scripts/accueil/accueilButtons.js'></script>
+<script src = '../scripts/accueil/mon_compteButton.js'></script>
