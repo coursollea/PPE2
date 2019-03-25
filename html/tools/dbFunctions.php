@@ -128,7 +128,8 @@
 	// Renvoie un STRING contenant un message pour les formulaire de redirection selon la valeur de msgCode :
 	/* 0 = Compte inexistant
 	 * 1 = Mot de passe erroné 
-	 * 2 = Bienvenue [username] */
+	 * 2 = Bienvenue [username] 
+	 * 3 = Inscription réussie */
 	function redirectMessage($msgCode)
 	{
 		if($msgCode == 0)
@@ -145,6 +146,10 @@
 			$message .= ' !';
 				
 			return '<span class = "defaultMessage">'.$message.' </span>';
+		}
+		else if($msgCode == 3)
+		{
+			return '<span class = "defaultMessage">Vous êtes désormais inscrit ! Vous allez recevoir un mail de confirmation</span>';
 		}
 		else return null;
 	}
@@ -163,5 +168,46 @@
 		else if($nb['nb'] > 0)
 			return '<span class = "notifNumber">'.$nb['nb'].'</span>';
 		else return null;
+	}
+	
+	// Renvoie la liste des sujets d'une catégorie sous forme de tableau 2D
+	function getTopicsAbout($keyword)
+	{
+		$query = 'SELECT * FROM Sujet WHERE idCategorie = 
+					(SELECT idCategorie FROM Categorie WHERE nomCategorie = "'.$keyword.'");';
+					
+		$bdd = createPDO();
+		
+		$reponse = $bdd->query($query);
+		
+		return $reponse->fetchAll(PDO::FETCH_ASSOC);
+	}
+	
+	// Renvoie les informations de l'auteur du topic passé en paramètre sous forme de tableau
+	function getTopicAuthor($idSujet)
+	{
+		$query = 'SELECT * FROM Compte WHERE idCompte = (SELECT idAuteur FROM Sujet WHERE idSujet = '.$idSujet.');';
+		$bdd = createPDO();
+		
+		$reponse = $bdd->query($query);
+
+		return $reponse->fetch(PDO::FETCH_ASSOC);	
+	}
+	
+	// Renvoie les informations du sujet correspondant a l'id passé en paramètre sous forme de tableau
+	
+	function createTopicLinkFor($idSujet)
+	{
+		$query = 'SELECT * FROM Sujet WHERE idSujet = '.$idSujet.';';
+		$bdd = createPDO();
+		$reponse = $bdd->query($query);
+		
+		$sujet = $reponse->fetch(PDO::FETCH_ALL);
+		
+		$author = getTopicAuthor($idSujet);
+		
+		echo "<a class = 'sujetLink'><div class = 'sujetDiv'>
+					<img src = '".$author['imgFileLink']."' class = 'avatar'><span class = 'sujetTitle'>".$sujet['titre']." </span>
+				</div></a>";
 	}
 	

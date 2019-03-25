@@ -9,7 +9,7 @@
 
 <?php
 	
-	include('dbFunctions.php');
+	include('../tools/dbFunctions.php');
 	session_start();
 	
 	if(isset($_GET['connexion']))
@@ -22,7 +22,7 @@
 			{
 				connect($_GET['username']); ?>
 				
-				<form method = 'GET' action = 'accueil.php' id = 'autoForm'>
+				<form method = 'GET' action = '../pages/accueil.php' id = 'autoForm'>
 					<input type = 'hidden' name = 'msg' value = '2'>
 				</form>
 				
@@ -34,7 +34,7 @@
 			else if($verify == -1)
 			{ ?>
 				
-				<form method = 'GET' action = 'accueil.php' id = 'autoForm'>
+				<form method = 'GET' action = '../pages/accueil.php' id = 'autoForm'>
 					<input type = 'hidden' name = 'msg' value = '0'>
 				</form>
 				
@@ -45,7 +45,7 @@
 			}
 			else if($verify == 0)
 			{  ?>
-				<form method = 'GET' action = 'accueil.php' id = 'autoForm'>
+				<form method = 'GET' action = '../pages/accueil.php' id = 'autoForm'>
 					<input type = 'hidden' name = 'msg' value = '1'>
 				</form>
 				

@@ -2,7 +2,7 @@ $('#connectionLink').on('click', function(){
 	
 	$('body').append(
 	'<div class = "filterDiv">'+
-		'<form class = "connectionDiv" methode = "GET" action = "portail.php">'+
+		'<form class = "connectionDiv" methode = "GET" action = "../redirect/portail.php">'+
 			'<h1> Se connecter </h1>'+
 			'<input type = "hidden" name = "connexion" >'+
 			'<input type = "text" name = "username" class = "form-inputtext" placeholder = "Nom de compte" required><br/>'+

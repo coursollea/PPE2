@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = 'utf-8'>
-		<link rel = 'stylesheet' href = 'style.css'>
+		<link rel = 'stylesheet' href = '../css/style.css'>
 		<title> Inscription </title>
 	</head>
 	
@@ -62,21 +62,22 @@
 			</ul>
 		</nav>
 		
-		<form class = "inscriptionForm" >
+		<form class = "inscriptionForm" id = "inscriptionForm">
 			<br/>
 			<h1> Formulaire d'inscription </h1>
-
+			
+			<p class = "messageSpan"></p>
 			
 			<input type = "hidden" name = "inscription">
 			
 			<div class = 'inputTextDiv'>
-				<input type = "text" name = "name" placeholder = "Nom" required class = 'inscription-inputtext' autocomplete="off"><br/>
-				<input type = "text" name = "firstname" placeholder = "Prénom" required class = 'inscription-inputtext' autocomplete="off"><br/>
-				<input type = "text" name = "email" placeholder = "Adresse mail" required class = 'inscription-inputtext' autocomplete="off"><br/><br/>
+				<input type = "text" name = "name" placeholder = "Nom" required class = 'inscription-inputtext' autocomplete="off"><label for = "name" class ='formlabel'></label><br/>
+				<input type = "text" name = "firstname" placeholder = "Prénom" required class = 'inscription-inputtext' autocomplete="off"><label for = "firstname" class ='formlabel'></label><br/>
+				<input type = "text" name = "mail" placeholder = "Adresse mail" required class = 'inscription-inputtext' autocomplete="off"><label for = "mail" class ='formlabel'></label><br/><br/>
 			
-				<input type = "text" name = "username" placeholder = "Pseudo" required class = 'inscription-inputtext' autocomplete="off" id = 'usernameText'><br/>
-				<input type = "password" name = "password" placeholder = "Mot de passe" required class = 'inscription-inputtext' autocomplete="off" id = 'passwordText'><br/>
-				<input type = "password" name = "confirmpassword" placeholder = "Confirmation du mot de passe" required class = 'inscription-inputtext' autocomplete="off"><br/>
+				<input type = "text" name = "username" placeholder = "Pseudo" required class = 'inscription-inputtext' autocomplete="off" id = 'usernameText'><label for = "username" class ='formlabel'></label><br/>
+				<input type = "password" name = "password" placeholder = "Mot de passe" required class = 'inscription-inputtext' autocomplete="off" id = 'passwordText'><label for = "password" class ='formlabel'></label><br/>
+				<input type = "password" name = "confirmpassword" placeholder = "Confirmation du mot de passe" required class = 'inscription-inputtext' autocomplete="off"><label for = "confirmpassword" class ='formlabel'></label><br/>
 			</div>
 			<br/><br/>
 			<div class = "charteDiv">
@@ -101,6 +102,8 @@
 			ses termes </label>
 			<br/>
 			<input type = "submit" id = "inscription_submit" value = "Envoyer">
+			
+			<p class = 'endForm'></p>
 		</form>
 		
 	</body>
@@ -108,5 +111,5 @@
 </html>
 
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
-<script src = 'inscriptionButton.js'></script>
+<script src = '../scripts/inscription/inscriptionButton.js'></script>
 
