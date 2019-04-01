@@ -25,7 +25,7 @@
 					<li><a><?php echo $_SESSION['username'];?> ▼</a>
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnexion</a></li>
-							<li><a>Mon compte</a></li>
+							<li><a id="compteLink">Mon compte</a></li>
 						</ul>
 					</li> 
 					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
@@ -78,11 +78,11 @@
 				</li>
 				<li><a> Développement ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a href='pageWeb.php?categorie= C++'> C++ </a></li>
+						<li><a href='pageWeb.php?categorie=C++'> C++ </a></li>
 						<li><a href='pageWeb.php?categorie=Java'> Java </a></li>
 						<li><a href='pageWeb.php?categorie=SQL'> SQL </a></li>
 						<li><a href='pageWeb.php?categorie=PHP'> PHP </a></li>
-						<li><a href='pageWeb.php?categorie= HTML/CSS'> HTML/CSS </a></li>
+						<li><a href='pageWeb.php?categorie=HTML/CSS'> HTML/CSS </a></li>
 						<li><a href='pageWeb.php?categorie=JavaScript'> JavaScript </a></li>
 						<li><a href='pageWeb.php?categorie=Python'> Python </a></li>
 					</ul>
@@ -95,7 +95,12 @@
 					
 					<?php 
 						
-						if(isset($_GET['msg']))
+						if(isset($_GET['modification_compte']))
+						{
+							modifyAccount($_GET['username2'], $_GET['password'], $_GET['imgLink']);
+							echo redirectMessage($_GET['msg']);
+						}
+						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
 					
 						?>
@@ -106,3 +111,4 @@
 
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
 <script src = '../scripts/accueil/accueilButtons.js'></script>
+<script src = '../scripts/accueil/mon_compteButton.js'></script>

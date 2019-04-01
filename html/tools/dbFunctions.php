@@ -129,7 +129,9 @@
 	/* 0 = Compte inexistant
 	 * 1 = Mot de passe erroné 
 	 * 2 = Bienvenue [username] 
-	 * 3 = Inscription réussie */
+	 * 3 = Inscription réussie 
+	 * 4 = modif pseudo */
+	 
 	function redirectMessage($msgCode)
 	{
 		if($msgCode == 0)
@@ -150,6 +152,10 @@
 		else if($msgCode == 3)
 		{
 			return '<span class = "defaultMessage">Vous êtes désormais inscrit ! Vous allez recevoir un mail de confirmation</span>';
+		}
+		else if ($msgCode == 4)
+		{
+			return '<span class = "defaultMessage">Bienvenue '.$_SESSION['username'].' !</span>';
 		}
 		else return null;
 	}
@@ -211,6 +217,7 @@
 				</div></a>";
 	}
 	
+<<<<<<< HEAD
 	//Renvoie l'id de l'utilisateur
 	
 	/*function getUserId($username)
@@ -221,3 +228,34 @@
 		
 		return $reponse->fetch(PDO::FETCH_ASSOC);
 	}*/
+=======
+	
+	// Renvoie le pseudo d'un utilisateur a partir de son id
+	function getUserNameOf($idCompte)
+	{
+		$query = 'SELECT username FROM Compte WHERE idCompte = '.$idCompte.';';
+		$bdd = createPDO();
+		
+		$reponse = $bdd->query($query);
+
+		return $reponse->fetch(PDO::FETCH_ASSOC)['username'];
+	}
+	
+	// Modifie le compte avec les valeurs passées en paramètre
+	function modifyAccount($username, $mdp, $imgLink)
+	{
+		
+		$array = Array();
+		$array[] = $username;
+		$array[] = $mdp;
+		$array[] = $imgLink;
+		
+		$bdd = createPDO();
+		
+		$query = 'UPDATE Compte SET username = '.$username.', password = '.$mdp.', imgLink = '.$imgLink.' WHERE idCompte = '.$_SESSION['idCompte'].';';
+		$bdd->query($query);
+		
+		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
+	}
+	
+>>>>>>> c102d58fa17cb2a80aa06107a2894515672aa1d7
