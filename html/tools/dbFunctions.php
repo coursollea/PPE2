@@ -4,7 +4,7 @@
 	function createPDO()
 	{
 		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
-	}
+	}.0
 	
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
@@ -211,3 +211,13 @@
 				</div></a>";
 	}
 	
+	//Renvoie l'id de l'utilisateur
+	
+	/*function getUserId($username)
+	{
+		$query = 'SELECT idCompte FROM Compte WHERE username = '.$username.';';
+		$bdd = createPDO();
+		$reponse = $bdd->query($query);
+		
+		return $reponse->fetch(PDO::FETCH_ASSOC);
+	}*/
