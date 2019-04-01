@@ -95,7 +95,12 @@
 					
 					<?php 
 						
-						if(isset($_GET['msg']))
+						if(isset($_GET['modification_compte']))
+						{
+							modifyAccount($_GET['username2'], $_GET['password'], $_GET['imgLink']);
+							echo redirectMessage($_GET['msg']);
+						}
+						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
 					
 						?>

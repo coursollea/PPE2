@@ -155,7 +155,7 @@
 		}
 		else if ($msgCode == 4)
 		{
-			return '<span class = "defaultMessage">'.$message.'</span>';
+			return '<span class = "defaultMessage">Bienvenue '.$_SESSION['username'].' !</span>';
 		}
 		else return null;
 	}
@@ -215,5 +215,34 @@
 		echo "<a class = 'sujetLink'><div class = 'sujetDiv'>
 					<img src = '".$author['imgFileLink']."' class = 'avatar'><span class = 'sujetTitle'>".$sujet['titre']." </span>
 				</div></a>";
+	}
+	
+	
+	// Renvoie le pseudo d'un utilisateur a partir de son id
+	function getUserNameOf($idCompte)
+	{
+		$query = 'SELECT username FROM Compte WHERE idCompte = '.$idCompte.';';
+		$bdd = createPDO();
+		
+		$reponse = $bdd->query($query);
+
+		return $reponse->fetch(PDO::FETCH_ASSOC)['username'];
+	}
+	
+	// Modifie le compte avec les valeurs passées en paramètre
+	function modifyAccount($username, $mdp, $imgLink)
+	{
+		
+		$array = Array();
+		$array[] = $username;
+		$array[] = $mdp;
+		$array[] = $imgLink;
+		
+		$bdd = createPDO();
+		
+		$query = 'UPDATE Compte SET username = '.$username.', password = '.$mdp.', imgLink = '.$imgLink.' WHERE idCompte = '.$_SESSION['idCompte'].';';
+		$bdd->query($query);
+		
+		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
 	
