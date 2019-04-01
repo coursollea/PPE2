@@ -22,5 +22,7 @@ $('#compteLink').on('click', function(){
 		$('.filterDiv').remove();
 	});
 	
+	
+	
 });
 
