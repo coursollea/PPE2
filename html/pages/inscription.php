@@ -70,6 +70,7 @@
 			
 			<input type = "hidden" name = "inscription">
 			
+			<div>
 			<div class = 'inputTextDiv'>
 				<input type = "text" name = "name" placeholder = "Nom" required class = 'inscription-inputtext' autocomplete="off"><label for = "name" class ='formlabel'></label><br/>
 				<input type = "text" name = "firstname" placeholder = "Prénom" required class = 'inscription-inputtext' autocomplete="off"><label for = "firstname" class ='formlabel'></label><br/>
@@ -79,6 +80,12 @@
 				<input type = "password" name = "password" placeholder = "Mot de passe" required class = 'inscription-inputtext' autocomplete="off" id = 'passwordText'><label for = "password" class ='formlabel'></label><br/>
 				<input type = "password" name = "confirmpassword" placeholder = "Confirmation du mot de passe" required class = 'inscription-inputtext' autocomplete="off"><label for = "confirmpassword" class ='formlabel'></label><br/>
 			</div>
+			
+			<div>
+				LOL
+			</div>
+			</div>
+			
 			<br/><br/>
 			<div class = "charteDiv">
 				<p> En vous inscrivant sur ce forum, vous vous engagez à respecter les règles mises en place

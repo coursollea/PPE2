@@ -48,9 +48,9 @@
 			</div>
 		</div>
 		
-		<nav class = 'subNav'>
+		nav class = 'subNav'>
 			<ul class = 'menu'>
-				<li><a> Général </a></li>
+				<li><a href = 'pageWeb.php?categorie=Général'> Général </a></li>
 				<li><a> Jeu vidéo ▼</a>
 					<ul class = 'sousmenu'>
 						<li ><a href='pageWeb.php?categorie=PC'> PC </a></li>
@@ -75,18 +75,18 @@
 						<li><a href='pageWeb.php?categorie=Comédie'> Comédie </a></li>
 						<li><a href='pageWeb.php?categorie=Dramatique'> Dramatique </a></li>
 						<li><a href='pageWeb.php?categorie=Animé'> Animé </a></li>
-						<li><a href='pageWeb.php?categorie=Porno'> Porno </a></li>
+						<li><a href='https://www.dorcelstore.com/fr'> Porno </a></li>
 					</ul>
 				</li>
 				<li><a> Développement ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a href='pageWeb.php?categorie=PC'> C++ </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> Java </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> SQL </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> PHP </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> HTML/CSS </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> JavaScript </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> Python </a></li>
+						<li><a href='pageWeb.php?categorie= C++'> C++ </a></li>
+						<li><a href='pageWeb.php?categorie=Java'> Java </a></li>
+						<li><a href='pageWeb.php?categorie=SQL'> SQL </a></li>
+						<li><a href='pageWeb.php?categorie=PHP'> PHP </a></li>
+						<li><a href='pageWeb.php?categorie= HTML/CSS'> HTML/CSS </a></li>
+						<li><a href='pageWeb.php?categorie=JavaScript'> JavaScript </a></li>
+						<li><a href='pageWeb.php?categorie=Python'> Python </a></li>
 					</ul>
 				</li>
 					

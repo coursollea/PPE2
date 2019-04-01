@@ -8,7 +8,8 @@
 		<input type="file" name="name"/></br>
 		<input type="password" name="name"/></br>
 		<input type="password" name="rename"/></br>
-		<input type="submit" value="Save">
+		<input type="submit" value="Save" class="moncompte-submit">
+		
 	</form>
 <?php
 	}

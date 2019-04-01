@@ -71,7 +71,7 @@
 				<li><a> Films ▼</a>
 					<ul class = 'sousmenu'>
 						<li><a href='pageWeb.php?categorie=Action'> Action </a></li>
-						<li><a href='pageWeb.php?categorie=Comédie'> Comédie </a></li>
+						<li><a href='pageWeb.php?categorie=Comedie'> Comédie </a></li>
 						<li><a href='pageWeb.php?categorie=Dramatique'> Dramatique </a></li>
 						<li><a href='pageWeb.php?categorie=Animé'> Animé </a></li>
 						<li><a href='pageWeb.php?categorie=Porno'> Porno </a></li>
@@ -80,7 +80,7 @@
 				<li><a> Développement ▼</a>
 					<ul class = 'sousmenu'>
 						<li><a href='pageWeb.php?categorie=PC'> C++ </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> Java </a></li>
+						<li><a href='pageWeb.php?categorie=Java'> Java </a></li>
 						<li><a href='pageWeb.php?categorie=PC'> SQL </a></li>
 						<li><a href='pageWeb.php?categorie=PC'> PHP </a></li>
 						<li><a href='pageWeb.php?categorie=PC'> HTML/CSS </a></li>

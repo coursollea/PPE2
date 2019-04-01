@@ -129,7 +129,9 @@
 	/* 0 = Compte inexistant
 	 * 1 = Mot de passe erroné 
 	 * 2 = Bienvenue [username] 
-	 * 3 = Inscription réussie */
+	 * 3 = Inscription réussie 
+	 * 4 = modif pseudo */
+	 
 	function redirectMessage($msgCode)
 	{
 		if($msgCode == 0)
@@ -150,6 +152,10 @@
 		else if($msgCode == 3)
 		{
 			return '<span class = "defaultMessage">Vous êtes désormais inscrit ! Vous allez recevoir un mail de confirmation</span>';
+		}
+		else if ($msgCode == 4)
+		{
+			return '<span class = "defaultMessage">'.$message.'</span>';
 		}
 		else return null;
 	}

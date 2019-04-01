@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
 
-<?php include('../tools/dbFunctions.php');
+<?php include('dbFunctions.php');
 		session_start();
 		if(isset($_GET['deco']))
-			disconnect();?>
+			disconnect();
+?>
 
 <html>
 	<head>
 		<meta charset = 'utf-8'>
 		<title> Accueil </title>
-		<link rel='stylesheet' href='../css/style.css'>
+		<link rel='stylesheet' href='style.css'>
 	</head>
+	
+	<?php //connect('Bash'); ?>
 	
 	<body>
 		<div class = 'header'>
@@ -25,7 +28,7 @@
 					<li><a><?php echo $_SESSION['username'];?> ▼</a>
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnexion</a></li>
-							<li><a id="compteLink">Mon compte</a></li>
+							<li><a>Mon compte</a></li>
 						</ul>
 					</li> 
 					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
@@ -46,7 +49,7 @@
 			</div>
 		</div>
 		
-		<nav class = 'subNav'>
+		nav class = 'subNav'>
 			<ul class = 'menu'>
 				<li><a href = 'pageWeb.php?categorie=Général'> Général </a></li>
 				<li><a> Jeu vidéo ▼</a>
@@ -98,12 +101,11 @@
 						if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
 					
-						?>
+					?>
 				
 			</article>
 	</body>
 </html>
 
 <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
-<script src = '../scripts/accueil/accueilButtons.js'></script>
-<script src = '../scripts/accueil/mon_compteButton.js'></script>
+<script src = 'accueilButtons.js'></script>
