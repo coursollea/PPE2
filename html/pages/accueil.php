@@ -78,11 +78,11 @@
 				</li>
 				<li><a> Développement ▼</a>
 					<ul class = 'sousmenu'>
-						<li><a href='pageWeb.php?categorie= C++'> C++ </a></li>
+						<li><a href='pageWeb.php?categorie=C++'> C++ </a></li>
 						<li><a href='pageWeb.php?categorie=Java'> Java </a></li>
 						<li><a href='pageWeb.php?categorie=SQL'> SQL </a></li>
 						<li><a href='pageWeb.php?categorie=PHP'> PHP </a></li>
-						<li><a href='pageWeb.php?categorie= HTML/CSS'> HTML/CSS </a></li>
+						<li><a href='pageWeb.php?categorie=HTML/CSS'> HTML/CSS </a></li>
 						<li><a href='pageWeb.php?categorie=JavaScript'> JavaScript </a></li>
 						<li><a href='pageWeb.php?categorie=Python'> Python </a></li>
 					</ul>
