@@ -415,6 +415,7 @@ article div
 	height : 450px;
 	background-color : #0f254c;
 	color : white;
+	
 	border : 1px solid rgb(26,94,204);
 	
 	text-align : center;
@@ -613,4 +614,18 @@ article div
 	margin : 0;
 	border-radius : 50%;
 	color : white;
+}
+
+.form-inputtext-compte 
+{
+	width : 75%;
+	position : relative;
+	top : 30px;
+	padding : 10px 20px;
+	outline : none;
+	margin-top: 15px;
+}
+.moncompte-submit{
+	position: relative;
+	top:62px !important;
 }
