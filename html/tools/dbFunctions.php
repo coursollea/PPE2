@@ -3,8 +3,8 @@
 	// Créer un PDO ( A UTILISER IMPERATIVEMENT A CHAQUE FOIS QU'ON A BESOIN DE CREER UN PDO )
 	function createPDO()
 	{
-		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
-	}.0
+		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
+	}
 	
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
@@ -217,19 +217,6 @@
 				</div></a>";
 	}
 	
-<<<<<<< HEAD
-	//Renvoie l'id de l'utilisateur
-	
-	/*function getUserId($username)
-	{
-		$query = 'SELECT idCompte FROM Compte WHERE username = '.$username.';';
-		$bdd = createPDO();
-		$reponse = $bdd->query($query);
-		
-		return $reponse->fetch(PDO::FETCH_ASSOC);
-	}*/
-=======
-	
 	// Renvoie le pseudo d'un utilisateur a partir de son id
 	function getUserNameOf($idCompte)
 	{
@@ -258,4 +245,10 @@
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
 	
->>>>>>> c102d58fa17cb2a80aa06107a2894515672aa1d7
+	function getTheme()
+	{
+		$tab=getTopicAuthor($_POST['catégories'])
+		return $tab
+	}
+	
+
