@@ -248,8 +248,8 @@
 	
 	function getTheme()
 	{
-		$tab=getTopicAuthor($_POST['catégories'])
-		return $tab
+		$tab=getTopicAuthor($_POST['catégories']);
+		return $tab;
 	}
 	
 
