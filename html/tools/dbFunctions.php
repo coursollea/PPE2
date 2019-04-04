@@ -3,9 +3,10 @@
 	// Créer un PDO ( A UTILISER IMPERATIVEMENT A CHAQUE FOIS QU'ON A BESOIN DE CREER UN PDO )
 	function createPDO()
 	{
+
 		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
-	
+
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -239,7 +240,7 @@
 		
 		$bdd = createPDO();
 		
-		$query = 'UPDATE Compte SET username = '.$username.', password = '.$mdp.', imgLink = '.$imgLink.' WHERE idCompte = '.$_SESSION['idCompte'].';';
+		$query = 'UPDATE Compte SET username = "'.$username.'", password = "'.$mdp.'", imgFileLink = "'.$imgLink.'" WHERE idCompte = '.$_SESSION['idCompte'].';';
 		$bdd->query($query);
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
