@@ -2,7 +2,7 @@ $('#compteLink').on('click', function(){
 	
 	$('body').append(
 	'<div class = "filterDiv">'+
-		'<form class = "connectionDiv" methode = "GET" action = "">'+
+		'<form class = "connectionDiv" method = "POST"  enctype = "multipart/form-data" action = "">'+
 			'<h1> Modif Compte </h1>'+
 			'<input type = "hidden" name = "modification_compte" value = 1>'+
 			'<input type = "hidden" name = "msg" value=4>'+
