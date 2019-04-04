@@ -130,8 +130,7 @@
 	 * 1 = Mot de passe erroné 
 	 * 2 = Bienvenue [username] 
 	 * 3 = Inscription réussie 
-	 * 4 = modif pseudo */
-	 
+	 * 4 = modif pseudo */	 
 	function redirectMessage($msgCode)
 	{
 		if($msgCode == 0)
@@ -200,21 +199,38 @@
 		return $reponse->fetch(PDO::FETCH_ASSOC);	
 	}
 	
-	// Renvoie les informations du sujet correspondant a l'id passé en paramètre sous forme de tableau
-	
+	// Renvoie les informations du sujet correspondant a l'id passé en paramètre sous forme de tableau	
 	function createTopicLinkFor($idSujet)
 	{
-		$query = 'SELECT * FROM Sujet WHERE idSujet = '.$idSujet.';';
+		/*$query = 'SELECT * FROM Sujet WHERE idSujet = '.$idSujet.';';
 		$bdd = createPDO();
 		$reponse = $bdd->query($query);
 		
 		$sujet = $reponse->fetch(PDO::FETCH_ALL);
 		
-		$author = getTopicAuthor($idSujet);
+		$author = getTopicAuthor($idSujet);*/
 		
-		echo "<a class = 'sujetLink'><div class = 'sujetDiv'>
-					<img src = '".$author['imgFileLink']."' class = 'avatar'><span class = 'sujetTitle'>".$sujet['titre']." </span>
-				</div></a>";
+		$html = 
+		'<a class = sujetDiv>'.
+
+				'<div class = "sjtInfoDiv">'.
+
+					'<span>Titre</span>'.
+				'</div>'.
+			
+			
+				'<div class = "sjtPseudoDiv">'.
+					'<span>Pseudo</span>'.
+				'</div>'.
+			
+				
+				'<div class = "sjtDateDiv">'.
+					'<span>Date+Heure</span>'.
+				'</div>'.
+
+		'</a>';
+		
+		return $html;
 	}
 	
 	

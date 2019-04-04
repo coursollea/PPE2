@@ -12,10 +12,8 @@ $('#compteLink').on('click', function(){
 			'<input type="file" name="imgLink" class = "form-inputtext-compte"/>'+
 			'<input type = "submit" value = "Save" class="moncompte-submit">'+
 			'<input type = "button" value = "Annuler" id = "cancelButton" class="moncompte-submit">'+
-		'</form>'+
-		
-	'</div>'
-	
+		'</form>'+		
+	'</div>'	
 	);
 	
 	$('#cancelButton').on('click', function()

@@ -92,28 +92,17 @@
 			</ul>
 		</nav>
 			<article>
-					<?php 
-						
+					<?php 					
 						if(isset($_GET['msg']))
-							echo redirectMessage($_GET['msg']);
-					
+							echo redirectMessage($_GET['msg']);				
 						?>
 					
 					<div class = 'mainContainer'>
-						<p class = 'sujetEntete'><?php if(isset($_GET["categorie"])){ echo LocalisePage($_GET["categorie"]);}?></p>
-						<nav  class = 'sujetnav'>
-							<a> Créer un sujet </a>								 
-						</nav>
+						<div class = 'sujetEntete'></div>
 						
-						<a class = 'sujetLink'><div class = 'sujetDiv'>
-							<img src = '../../img/pauvre_gosse.jpg' class = 'avatar'><span class = "sujetTitle"> Avez-vous l'impression d'être victime des colifichées ? </span>
-						</div></a>
-						
-						<a class = 'sujetLink'><div class = 'sujetDiv'>
-							<img src = '../../img/trollface.png' class = 'avatar'><span class = 'sujetTitle'> Benalla, on en parle ? </span>
-						</div></a>
-						
-						<br/><br/>
+						<?php
+							echo createTopicLinkFor(1);
+						?>
 
 					</div>
 				

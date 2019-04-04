@@ -103,7 +103,7 @@
 						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
 					
-						?>
+					?>
 				
 			</article>
 	</body>
