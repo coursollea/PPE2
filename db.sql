@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS Categorie
 	
 	idCategorie INT(11) AUTO_INCREMENT NOT NULL,
 	nomCategorie VARCHAR(64),
-	label TEXT,
+	theme VARCHAR(64),
 	
 	PRIMARY KEY(idCategorie)
 	
@@ -84,6 +84,15 @@ CREATE TABLE IF NOT EXISTS Message
 	
 )ENGINE = innodb;
 
+CREATE TABLE IF NOT EXISTS Theme
+(
+	idTheme INT(11) AUTO_INCREMENT NOT NULL,
+	nomTheme VARCHAR(64),
+	
+	PRIMARY KEY(idTheme)
+	
+)ENGINE = innodb;
+
 
 ALTER TABLE Sujet
 ADD CONSTRAINT sujet_idcategorie
@@ -126,34 +135,42 @@ FOREIGN KEY(idEnvoyeur)
 REFERENCES Compte(idCompte);
 
 
+INSERT INTO Theme (nomTheme)
+values('Jeu Video'),
+('Musique'),
+('Films'),
+('Développement');
+
 INSERT INTO Compte (username, password, nom, prenom, admin, banned)
 values ('bdufour', 'btssio', 'Dufour', 'Bastien', 1, 0),
 ('thelligar', 'btssio', 'Helligar', 'Thomas', 0, 0),
 ('acoursolle', 'btssio', 'Coursolle', 'Arthur', 0, 0);
 
-INSERT INTO Categorie (nomCategorie, label)
-values('C++', 'Développement > C++'),
-('Java', 'Développement > Java'),
-('SQL', 'Développement > SQL'),
-('PHP', 'Développement > PHP'),
-('HTML/CSS', 'Développement > HTML/CSS'),
-('JavaScript' , 'Développement > JavaScript'),
-('Python', 'Développement > Python'),
+INSERT INTO Categorie (nomCategorie, theme)
+values('C++', 'Développement'),
+('Java', 'Développement'),
+('SQL', 'Développement'),
+('PHP', 'Développement'),
+('HTML/CSS', 'Développement'),
+('JavaScript' , 'Développement'),
+('Python', 'Développement'),
 
-('Action', 'Films > Action'),
-('Comédie', 'Films > Comédie'),
-('Dramatique', 'Films > Dramatique'),
-('Animé', 'Films > Animé'),
-('Porno', 'Films > Porno'),
+('Action', 'Films'),
+('Comédie', 'Films'),
+('Dramatique', 'Films'),
+('Animé', 'Films'),
+('Porno', 'Films'),
 
-('Hip-Hop', 'Musique > Hip-Hop'),
-('Rock', 'Musique > Rock'),
-('Electro', 'Musique > Electro'),
-('Variété', 'Musique > Variété'),
-('Autre', 'Musique > Autre'),
+('Hip-Hop', 'Musique'),
+('Rock', 'Musique'),
+('Electro', 'Musique'),
+('Variété', 'Musique'),
+('Autre', 'Musique'),
 
-('PC', 'Jeu Vidéo > PC'),
-('PS4', 'Jeu Vidéo > PS4'),
-('ONE', 'Jeu Vidéo > ONE'),
-('Switch', 'Jeu Vidéo > Switch'),
-('Rétro', 'Jeu Vidéo > Rétro');
+('PC', 'Jeu Vidéo'),
+('PS4', 'Jeu Vidéo'),
+('ONE', 'Jeu Vidéo'),
+('Switch', 'Jeu Vidéo'),
+('Rétro', 'Jeu Vidéo');
+
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<!DOCTYPE html>
 
 <?php include('../tools/dbFunctions.php');
@@ -92,9 +93,23 @@
 		</nav>
 			<article>
 				<h1> Accueil </h1>
+=======
+﻿<?php include('mainMenuBar.php'); ?>
+<article>
+	<h1> Accueil </h1>
+>>>>>>> refs/remotes/origin/master
 					
-					<?php 
+		<?php 
 						
+<<<<<<< HEAD
+			if(isset($_GET['modification_compte']))
+			{
+				modifyAccount($_GET['username2'], $_GET['password'], $_GET['imgLink']);
+				echo redirectMessage($_GET['msg']);
+			}
+			else if(isset($_GET['msg']))
+				echo redirectMessage($_GET['msg']);
+=======
 						if(isset($_POST['modification_compte']))
 						{
 							modifyAccount($_POST['username2'], $_POST['password'], $_POST['imgLink']);
@@ -102,10 +117,11 @@
 						}
 						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
+>>>>>>> refs/remotes/origin/master
 					
-						?>
+		?>
 				
-			</article>
+</article>
 	</body>
 </html>
 

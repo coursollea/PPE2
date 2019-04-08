@@ -8,8 +8,11 @@
 	}
 
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> refs/remotes/origin/master
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -134,8 +137,7 @@
 	 * 1 = Mot de passe erroné 
 	 * 2 = Bienvenue [username] 
 	 * 3 = Inscription réussie 
-	 * 4 = modif pseudo */
-	 
+	 * 4 = modif pseudo */	 
 	function redirectMessage($msgCode)
 	{
 		if($msgCode == 0)
@@ -181,10 +183,9 @@
 	}
 	
 	// Renvoie la liste des sujets d'une catégorie sous forme de tableau 2D
-	function getTopicsAbout($keyword)
+	function getTopicsAbout($id)
 	{
-		$query = 'SELECT * FROM Sujet WHERE idCategorie = 
-					(SELECT idCategorie FROM Categorie WHERE nomCategorie = "'.$keyword.'");';
+		$query = 'SELECT * FROM Sujet WHERE idCategorie = '.$id.';';
 					
 		$bdd = createPDO();
 		
@@ -204,22 +205,45 @@
 		return $reponse->fetch(PDO::FETCH_ASSOC);	
 	}
 	
-	// Renvoie les informations du sujet correspondant a l'id passé en paramètre sous forme de tableau
-	
+	// Renvoie les informations du sujet correspondant a l'id passé en paramètre sous forme de tableau	
 	function createTopicLinkFor($idSujet)
 	{
-		$query = 'SELECT * FROM Sujet WHERE idSujet = '.$idSujet.';';
+		/*$query = 'SELECT * FROM Sujet WHERE idSujet = '.$idSujet.';';
 		$bdd = createPDO();
 		$reponse = $bdd->query($query);
 		
 		$sujet = $reponse->fetch(PDO::FETCH_ALL);
 		
-		$author = getTopicAuthor($idSujet);
+		$author = getTopicAuthor($idSujet);*/
 		
-		echo "<a class = 'sujetLink'><div class = 'sujetDiv'>
-					<img src = '".$author['imgFileLink']."' class = 'avatar'><span class = 'sujetTitle'>".$sujet['titre']." </span>
-				</div></a>";
+		$html = 
+		'<a class = sujetDiv>'.
+
+				'<div class = "sjtInfoDiv">'.
+					
+					'<img src = "../../img/pauvre_gosse.jpg" class = "avatar">'.
+					'<span class = "sujetTitle">Titre</span>'.
+					
+				'</div>'.
+			
+			
+				'<div class = "sjtPseudoDiv">'.
+					'<span class = "pseudoSpan">Pseudo</span>'.
+				'</div>'.
+			
+				
+				'<div class = "sjtDateDiv">'.
+					'<span>Date+Heure</span>'.
+				'</div>'.
+
+		'</a>';
+		
+		return $html;
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> refs/remotes/origin/master
 
 
 	//Renvoie l'id de l'utilisateur
@@ -233,7 +257,10 @@
 		return $reponse->fetch(PDO::FETCH_ASSOC);
 	}*/
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> refs/remotes/origin/master
 
 	// Renvoie le pseudo d'un utilisateur a partir de son id
 	function getUserNameOf($idCompte)
@@ -262,10 +289,21 @@
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> refs/remotes/origin/master
 
 	function getTheme()
 	{
-		$tab=getTopicAuthor($_POST['catégories']);
+		$bdd = createPDO();
+		$reponse = $bdd->query('SELECT DISTINCT * FROM theme ');
+		$tab = Array();
+		
+		while($data = $reponse->fetch())
+		{
+			$tab[]=$data;
+		}
 		return $tab;
 	}
 	

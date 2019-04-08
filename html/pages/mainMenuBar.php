@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 
-<?php include('../tools/fonctionPage.php');
+<?php include('../tools/dbFunctions.php');
 		session_start();
 		if(isset($_GET['deco']))
 			disconnect();?>
+
 <html>
 	<head>
 		<meta charset = 'utf-8'>
-		<title> test </title>
+		<title> Accueil </title>
 		<link rel='stylesheet' href='../css/style.css'>
-		<script src="//cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
 	</head>
-
+	
 	<body>
-	</div>
 		<div class = 'header'>
 			<ul class = 'navright'>
 				<?php if(!isConnected()) 
@@ -26,7 +25,7 @@
 					<li><a><?php echo $_SESSION['username'];?> ▼</a>
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnexion</a></li>
-							<li><a>Mon compte</a></li>
+							<li><a id="compteLink">Mon compte</a></li>
 						</ul>
 					</li> 
 					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
@@ -46,6 +45,7 @@
 			<div>
 			</div>
 		</div>
+		
 		<nav class = 'subNav'>
 			<ul class = 'menu'>
 				<li><a href = 'pageWeb.php?categorie=Général'> Général </a></li>
@@ -70,10 +70,10 @@
 				<li><a> Films ▼</a>
 					<ul class = 'sousmenu'>
 						<li><a href='pageWeb.php?categorie=Action'> Action </a></li>
-						<li><a href='pageWeb.php?categorie=Comedie'> Comédie </a></li>
+						<li><a href='pageWeb.php?categorie=Comédie'> Comédie </a></li>
 						<li><a href='pageWeb.php?categorie=Dramatique'> Dramatique </a></li>
 						<li><a href='pageWeb.php?categorie=Animé'> Animé </a></li>
-						<li><a href='pageWeb.php?categorie=Porno'> Porno </a></li>
+						<li><a href='https://www.dorcelstore.com/fr'> Porno </a></li>
 					</ul>
 				</li>
 				<li><a> Développement ▼</a>
@@ -90,43 +90,3 @@
 					
 			</ul>
 		</nav>
-		
-		
-		<div>
-		
-		<p>Catégories de l'article :</p>
-		
-			<FORM>
-				<SELECT class="categorie" size="1">
-				<?php $tab=getTheme();
-						
-						for($i=0;$i<count($tab);$i++)
-						{
-						?><OPTION value= " <?php echo $tab[$i]["idTheme"];?>"><?php echo $tab[$i]["nomTheme"];?></OPTION>
-						<?php
-						}
-							?>
-				
-				</SELECT>
-			</FORM>
-			
-		<p>thème de l'article :</p>
-			<FORM>
-				<SELECT name="theme" size="1">
-				 
-				</SELECT>
-			</FORM>
-			
-		<p>image</p>
-			<input class="favorite styled" type="button" value="import"></br>
-
-			
-			<input type = "text"  name = "Titre" placeholder= "Titre de l'article" required class = 'inscription-inputtext' autocomplete="off"><label for = "name" class ='formlabel'></label><br/>
-		</div>
-		
-	
-	
-	
-		
-	</body>
-</html>
