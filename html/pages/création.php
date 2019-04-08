@@ -95,25 +95,25 @@
 		<div>
 		
 		<p>Catégories de l'article :</p>
+		
 			<FORM>
 				<SELECT name="catégories" size="1">
-				<OPTION>Jeu vidéo
-				<OPTION>Musique 
-				<OPTION> Films
-				<OPTION>Développement
+				<?php $tab=getTheme();
+						
+						for($i=0;$i<count($tab);$i++)
+						{
+						?><OPTION value= " <?php echo $tab[$i]["idTheme"];?>"><?php echo $tab[$i]["nomTheme"];?></OPTION>
+						<?php
+						}
+							?>
+				
 				</SELECT>
 			</FORM>
 			
 		<p>thème de l'article :</p>
 			<FORM>
-				<SELECT name="thème" size="1">
-				 <?php $tab=getTheme();
-						
-						for($i=0;$i<count($tab);$i++)
-						{
-						?><OPTION><?php echo $tab[$i]["Theme"];
-						}
-							?>
+				<SELECT name="theme" size="1">
+				 
 				</SELECT>
 			</FORM>
 			

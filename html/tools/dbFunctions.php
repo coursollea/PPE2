@@ -246,9 +246,18 @@
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
 	
+	
+	
 	function getTheme()
 	{
-		$tab=getTopicAuthor($_POST['catégories']);
+		$bdd = createPDO();
+		$reponse = $bdd->query('SELECT DISTINCT * FROM theme ');
+		$tab = Array();
+		
+		while($data = $reponse->fetch())
+		{
+			$tab[]=$data;
+		}
 		return $tab;
 	}
 	

@@ -103,7 +103,7 @@
 					<div class = 'mainContainer'>
 						<p class = 'sujetEntete'><?php if(isset($_GET["categorie"])){ echo LocalisePage($_GET["categorie"]);}?></p>
 						<nav  class = 'sujetnav'>
-							<a> Créer un sujet </a>								 
+							<a href = 'création.php'> Créer un sujet </a>								 
 						</nav>
 						
 						<a class = 'sujetLink'><div class = 'sujetDiv'>
