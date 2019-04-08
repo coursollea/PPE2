@@ -7,6 +7,11 @@
 		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
 
+<<<<<<< HEAD
+	
+	
+=======
+>>>>>>> refs/remotes/origin/master
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -218,6 +223,20 @@
 				</div></a>";
 	}
 	
+
+
+	//Renvoie l'id de l'utilisateur
+	
+	/*function getUserId($username)
+	{
+		$query = 'SELECT idCompte FROM Compte WHERE username = '.$username.';';
+		$bdd = createPDO();
+		$reponse = $bdd->query($query);
+		
+		return $reponse->fetch(PDO::FETCH_ASSOC);
+	}*/
+
+
 	// Renvoie le pseudo d'un utilisateur a partir de son id
 	function getUserNameOf($idCompte)
 	{
@@ -246,8 +265,7 @@
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
 	
-	
-	
+
 	function getTheme()
 	{
 		$bdd = createPDO();
@@ -261,4 +279,5 @@
 		return $tab;
 	}
 	
+
 
