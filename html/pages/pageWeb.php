@@ -10,6 +10,7 @@
 		<meta charset = 'utf-8'>
 		<title> Accueil </title>
 		<link rel='stylesheet' href='../css/style.css'>
+		<script src="//cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
 	</head>
 	
 	
