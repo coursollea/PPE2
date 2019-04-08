@@ -10,6 +10,7 @@
 		<meta charset = 'utf-8'>
 		<title> Accueil </title>
 		<link rel='stylesheet' href='../css/style.css'>
+		<script src="//cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
 	</head>
 	
 	
@@ -81,11 +82,11 @@
 					<ul class = 'sousmenu'>
 						<li><a href='pageWeb.php?categorie=C++'> C++ </a></li>
 						<li><a href='pageWeb.php?categorie=Java'> Java </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> SQL </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> PHP </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> HTML/CSS </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> JavaScript </a></li>
-						<li><a href='pageWeb.php?categorie=PC'> Python </a></li>
+						<li><a href='pageWeb.php?categorie=SQL'> SQL </a></li>
+						<li><a href='pageWeb.php?categorie=PHP'> PHP </a></li>
+						<li><a href='pageWeb.php?categorie=HTML/CSS'> HTML/CSS </a></li>
+						<li><a href='pageWeb.php?categorie=JavaScript'> JavaScript </a></li>
+						<li><a href='pageWeb.php?categorie=Python'> Python </a></li>
 					</ul>
 				</li>
 					
@@ -98,7 +99,18 @@
 						?>
 					
 					<div class = 'mainContainer'>
+<<<<<<< HEAD
 						<div class = 'sujetEntete'> Test </div>
+=======
+						<p class = 'sujetEntete'><?php if(isset($_GET["categorie"])){ echo LocalisePage($_GET["categorie"]);}?></p>
+						<nav  class = 'sujetnav'>
+							<a href = 'création.php'> Créer un sujet </a>								 
+						</nav>
+						
+						<a class = 'sujetLink'><div class = 'sujetDiv'>
+							<img src = '../../img/pauvre_gosse.jpg' class = 'avatar'><span class = "sujetTitle"> Avez-vous l'impression d'être victime des colifichées ? </span>
+						</div></a>
+>>>>>>> refs/remotes/origin/master
 						
 						<?php
 							echo createTopicLinkFor(1);

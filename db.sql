@@ -84,6 +84,15 @@ CREATE TABLE IF NOT EXISTS Message
 	
 )ENGINE = innodb;
 
+CREATE TABLE IF NOT EXISTS Theme
+(
+	idTheme INT(11) AUTO_INCREMENT NOT NULL,
+	nomTheme VARCHAR(64),
+	
+	PRIMARY KEY(idCategorie)
+	
+)ENGINE = innodb;
+
 
 ALTER TABLE Sujet
 ADD CONSTRAINT sujet_idcategorie
@@ -126,6 +135,12 @@ FOREIGN KEY(idEnvoyeur)
 REFERENCES Compte(idCompte);
 
 
+INSERT INTO Theme (nomTheme)
+values('Jeu Video'),
+('Musique'),
+('Films'),
+('Développement');
+
 INSERT INTO Compte (username, password, nom, prenom, admin, banned)
 values ('bdufour', 'btssio', 'Dufour', 'Bastien', 1, 0),
 ('thelligar', 'btssio', 'Helligar', 'Thomas', 0, 0),
@@ -157,3 +172,5 @@ values('C++', 'Développement > C++'),
 ('ONE', 'Jeu Vidéo > ONE'),
 ('Switch', 'Jeu Vidéo > Switch'),
 ('Rétro', 'Jeu Vidéo > Rétro');
+
+

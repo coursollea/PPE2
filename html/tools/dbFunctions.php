@@ -3,9 +3,11 @@
 	// Créer un PDO ( A UTILISER IMPERATIVEMENT A CHAQUE FOIS QU'ON A BESOIN DE CREER UN PDO )
 	function createPDO()
 	{
-		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
+
+		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
-	
+
+
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -234,7 +236,20 @@
 		return $html;
 	}
 	
+
+
+	//Renvoie l'id de l'utilisateur
 	
+	/*function getUserId($username)
+	{
+		$query = 'SELECT idCompte FROM Compte WHERE username = '.$username.';';
+		$bdd = createPDO();
+		$reponse = $bdd->query($query);
+		
+		return $reponse->fetch(PDO::FETCH_ASSOC);
+	}*/
+
+
 	// Renvoie le pseudo d'un utilisateur a partir de son id
 	function getUserNameOf($idCompte)
 	{
@@ -257,9 +272,25 @@
 		
 		$bdd = createPDO();
 		
-		$query = 'UPDATE Compte SET username = '.$username.', password = '.$mdp.', imgLink = '.$imgLink.' WHERE idCompte = '.$_SESSION['idCompte'].';';
+		$query = 'UPDATE Compte SET username = "'.$username.'", password = "'.$mdp.'", imgFileLink = "'.$imgLink.'" WHERE idCompte = '.$_SESSION['idCompte'].';';
 		$bdd->query($query);
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
 	
+
+	function getTheme()
+	{
+		$bdd = createPDO();
+		$reponse = $bdd->query('SELECT DISTINCT * FROM theme ');
+		$tab = Array();
+		
+		while($data = $reponse->fetch())
+		{
+			$tab[]=$data;
+		}
+		return $tab;
+	}
+	
+
+
