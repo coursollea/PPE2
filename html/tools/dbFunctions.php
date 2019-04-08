@@ -237,11 +237,7 @@
 		'</a>';
 		
 		return $html;
-<<<<<<< HEAD
-	}	
-=======
-	}
->>>>>>> refs/remotes/origin/master
+
 
 
 	//Renvoie l'id de l'utilisateur
