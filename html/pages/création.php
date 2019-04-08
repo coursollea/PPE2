@@ -97,7 +97,7 @@
 		<p>Catégories de l'article :</p>
 		
 			<FORM>
-				<SELECT name="catégories" size="1">
+				<SELECT class="categorie" size="1">
 				<?php $tab=getTheme();
 						
 						for($i=0;$i<count($tab);$i++)
