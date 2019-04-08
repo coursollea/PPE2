@@ -176,10 +176,9 @@
 	}
 	
 	// Renvoie la liste des sujets d'une catégorie sous forme de tableau 2D
-	function getTopicsAbout($keyword)
+	function getTopicsAbout($id)
 	{
-		$query = 'SELECT * FROM Sujet WHERE idCategorie = 
-					(SELECT idCategorie FROM Categorie WHERE nomCategorie = "'.$keyword.'");';
+		$query = 'SELECT * FROM Sujet WHERE idCategorie = '.$id.';';
 					
 		$bdd = createPDO();
 		
@@ -214,13 +213,15 @@
 		'<a class = sujetDiv>'.
 
 				'<div class = "sjtInfoDiv">'.
-
-					'<span>Titre</span>'.
+					
+					'<img src = "../../img/pauvre_gosse.jpg" class = "avatar">'.
+					'<span class = "sujetTitle">Titre</span>'.
+					
 				'</div>'.
 			
 			
 				'<div class = "sjtPseudoDiv">'.
-					'<span>Pseudo</span>'.
+					'<span class = "pseudoSpan">Pseudo</span>'.
 				'</div>'.
 			
 				
