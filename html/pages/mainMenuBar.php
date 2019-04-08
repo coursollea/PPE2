@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php include('../tools/dbFunctions.php');
+<?php include ('../tools/fonctionPage.php');
 		session_start();
 		if(isset($_GET['deco']))
 			disconnect();?>

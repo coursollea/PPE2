@@ -4,9 +4,8 @@
 	function createPDO()
 	{
 
-		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
+		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
 	}
-
 
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
@@ -235,7 +234,6 @@
 		
 		return $html;
 	}
-	
 
 
 	//Renvoie l'id de l'utilisateur
@@ -277,7 +275,7 @@
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
-	
+
 
 	function getTheme()
 	{

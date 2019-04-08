@@ -1,4 +1,4 @@
-﻿<?php include('mainMenuBar.php'); ?>
+<?php include('mainMenuBar.php'); ?>
 <article>
 	<h1> Accueil </h1>
 					
@@ -11,7 +11,9 @@
 				echo redirectMessage($_GET['msg']);
 			}
 			else if(isset($_GET['msg']))
+
 				echo redirectMessage($_GET['msg']);
+
 
 						if(isset($_POST['modification_compte']))
 						{
