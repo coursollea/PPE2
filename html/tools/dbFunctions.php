@@ -4,13 +4,10 @@
 	function createPDO()
 	{
 
-		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
+		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> refs/remotes/origin/master
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -237,11 +234,9 @@
 		'</a>';
 		
 		return $html;
-<<<<<<< HEAD
+
 	}	
-=======
-	}
->>>>>>> refs/remotes/origin/master
+
 
 
 	//Renvoie l'id de l'utilisateur
