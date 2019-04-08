@@ -1,6 +1,10 @@
 <?php include('mainMenuBar.php'); ?>
 <article>
 	<h1> Accueil </h1>
+<<<<<<< HEAD
+
+=======
+>>>>>>> refs/remotes/origin/master
 					
 		<?php 
 						
@@ -11,10 +15,13 @@
 				echo redirectMessage($_GET['msg']);
 			}
 			else if(isset($_GET['msg']))
+<<<<<<< HEAD
+=======
 
 				echo redirectMessage($_GET['msg']);
 
 
+>>>>>>> refs/remotes/origin/master
 						if(isset($_POST['modification_compte']))
 						{
 							modifyAccount($_POST['username2'], $_POST['password'], $_POST['imgLink']);
