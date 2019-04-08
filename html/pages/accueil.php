@@ -4,15 +4,13 @@
 					
 		<?php 
 						
-<<<<<<< HEAD
 			if(isset($_GET['modification_compte']))
 			{
 				modifyAccount($_GET['username2'], $_GET['password'], $_GET['imgLink']);
 				echo redirectMessage($_GET['msg']);
 			}
 			else if(isset($_GET['msg']))
-				echo redirectMessage($_GET['msg']);
-=======
+
 						if(isset($_POST['modification_compte']))
 						{
 							modifyAccount($_POST['username2'], $_POST['password'], $_POST['imgLink']);
@@ -20,7 +18,7 @@
 						}
 						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
->>>>>>> refs/remotes/origin/master
+
 					
 		?>
 				

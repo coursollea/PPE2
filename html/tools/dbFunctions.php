@@ -4,7 +4,7 @@
 	function createPDO()
 	{
 
-		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
+		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
 	}
 
 
