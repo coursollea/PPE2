@@ -8,11 +8,6 @@
 	}
 
 
-<<<<<<< HEAD
-	
-
-=======
->>>>>>> refs/remotes/origin/master
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -239,11 +234,7 @@
 		'</a>';
 		
 		return $html;
-	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> refs/remotes/origin/master
+	}	
 
 
 	//Renvoie l'id de l'utilisateur
@@ -257,10 +248,6 @@
 		return $reponse->fetch(PDO::FETCH_ASSOC);
 	}*/
 
-<<<<<<< HEAD
-	
-=======
->>>>>>> refs/remotes/origin/master
 
 	// Renvoie le pseudo d'un utilisateur a partir de son id
 	function getUserNameOf($idCompte)
@@ -289,10 +276,7 @@
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> refs/remotes/origin/master
+
 
 	function getTheme()
 	{

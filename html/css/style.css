@@ -719,6 +719,7 @@ input:-webkit-autofill:active  {
 	align-items: center; 
 	justify-content: center; 
 	background: blue; 
+	font-family: Castellar; 
 }
 
 .differRegle
