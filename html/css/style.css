@@ -1,11 +1,23 @@
+html{
+	
+	height : 100%;
+}
+
 body
 {
 	padding : 0;
 	margin : 0;
+<<<<<<< HEAD
+	background : url('../../img/test2.jpg');
+	background-size : cover;
+	font-family : Georgia;
+	height : 100%;
+=======
 	/*background : url('../../img/background.jpg') no-repeat;
 	background-size : cover;*/
 	font-family : Arial, sans-serif;
 	background-color : /*rgb(230,230,230);*/ white;
+>>>>>>> refs/remotes/origin/master
 }
 
 h1
@@ -667,7 +679,51 @@ input:-webkit-autofill:active  {
 	outline : none;
 	margin-top: 15px;
 }
-.moncompte-submit{
+.moncompte-submit
+{
 	position: relative;
 	top:62px !important;
+}
+
+#charteContainer
+{
+	height: 100%;
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+}
+
+.charteDiv2
+{
+	align-items: center; 
+	text-align: center;  
+	background: red; 
+	
+	
+	overflow : auto;
+	margin-bottom : 10px;
+	text-align : left;
+	width : 85%;
+	max-width : 85%;
+	padding : 30px 30px;
+	margin-left : auto;
+	margin-right : auto;
+	border-radius : 25px;
+	border : 3px solid gray;
+	color : gray;
+}
+
+.regle_charteDiv
+{
+	text-align: center; 
+	align-items: center; 
+	justify-content: center; 
+	background: blue; 
+}
+
+.differRegle
+{
+	text-align: left; 
+	align-items: center;
+	background: yellow; 
 }
