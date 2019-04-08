@@ -7,11 +7,9 @@
 		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
 
-<<<<<<< HEAD
+
 	
-	
-=======
->>>>>>> refs/remotes/origin/master
+
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -222,8 +220,7 @@
 					<img src = '".$author['imgFileLink']."' class = 'avatar'><span class = 'sujetTitle'>".$sujet['titre']." </span>
 				</div></a>";
 	}
-	
-<<<<<<< HEAD
+
 
 	//Renvoie l'id de l'utilisateur
 	
@@ -237,8 +234,7 @@
 	}*/
 
 	
-=======
->>>>>>> refs/remotes/origin/master
+
 	// Renvoie le pseudo d'un utilisateur a partir de son id
 	function getUserNameOf($idCompte)
 	{
@@ -266,14 +262,12 @@
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
-	
-<<<<<<< HEAD
-=======
+
 	function getTheme()
 	{
 		$tab=getTopicAuthor($_POST['catégories']);
 		return $tab;
 	}
 	
->>>>>>> refs/remotes/origin/master
+
 
