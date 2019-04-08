@@ -4,7 +4,7 @@
 	function createPDO()
 	{
 
-		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', '');
+		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
 
 	// TRUE si l'utilisateur est connecté, sinon FALSE

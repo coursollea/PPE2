@@ -1,5 +1,4 @@
-
-﻿<?php include('mainMenuBar.php'); ?>
+<?php include('mainMenuBar.php'); ?>
 <article>
 	<h1> Accueil </h1>
 					
