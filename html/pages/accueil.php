@@ -1,9 +1,11 @@
 <?php include('mainMenuBar.php'); ?>
 <article>
 	<h1> Accueil </h1>
+
 					
 		<?php 
 						
+
 			if(isset($_GET['modification_compte']))
 			{
 				modifyAccount($_GET['username2'], $_GET['password'], $_GET['imgLink']);
@@ -18,7 +20,6 @@
 						}
 						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
-
 					
 		?>
 				

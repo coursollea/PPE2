@@ -7,6 +7,7 @@
 		return new PDO('mysql:host=localhost;dbname=basesite;charset=utf8', 'root', 'root');
 	}
 
+
 	// TRUE si l'utilisateur est connecté, sinon FALSE
 	function isConnected()
 	{
@@ -233,7 +234,10 @@
 		'</a>';
 		
 		return $html;
-	}
+
+	}	
+
+
 
 
 	//Renvoie l'id de l'utilisateur
@@ -288,7 +292,7 @@
 			$tab[]=$data;
 		}
 		return $tab;
-	}
+	} ?>
 	
 
 
