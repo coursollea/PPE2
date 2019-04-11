@@ -239,6 +239,7 @@
 
 
 
+
 	//Renvoie l'id de l'utilisateur
 	
 	/*function getUserId($username)
@@ -291,7 +292,7 @@
 			$tab[]=$data;
 		}
 		return $tab;
-	}
+	} ?>
 	
 
 
