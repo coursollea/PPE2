@@ -236,6 +236,9 @@
 		return $html;
 	}
 
+		
+
+
 
 
 	//Renvoie l'id de l'utilisateur
@@ -290,4 +293,11 @@
 			$tab[]=$data;
 		}
 		return $tab;
+
 	}
+
+	 ?>
+	
+
+
+

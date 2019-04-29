@@ -13,11 +13,6 @@
 			}
 			else if(isset($_GET['msg']))
 
-
-				echo redirectMessage($_GET['msg']);
-
-
-
 						if(isset($_POST['modification_compte']))
 						{
 							modifyAccount($_POST['username2'], $_POST['password'], $_POST['imgLink']);
@@ -25,7 +20,6 @@
 						}
 						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
-
 					
 		?>
 				

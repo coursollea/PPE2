@@ -1,26 +1,21 @@
 <?php include ('mainMenuBar.php'); ?>
-			<article>
 
-					<?php 					
-						if(isset($_GET['msg']))
-							echo redirectMessage($_GET['msg']);				
-						?>
-					
-					<div class = 'mainContainer'>
 
-			
+				<?php 					
+					if(isset($_GET['msg']))
+						echo redirectMessage($_GET['msg']);				
+					?>
+				
+				<div class = 'mainContainer'>
 
 						<p class = 'sujetEntete'><?php if(isset($_GET["categorie"])){ echo LocalisePage($_GET["categorie"]);}?></p>
 						<nav  class = 'sujetnav'>
 							<a href = 'création.php'> Créer un sujet </a>								 
 						</nav>
-						
-						<a class = 'sujetLink'><div class = 'sujetDiv'>
-							<img src = '../../img/pauvre_gosse.jpg' class = 'avatar'><span class = "sujetTitle"> Avez-vous l'impression d'être victime des colifichées ? </span>
-						</div></a>
+					
 
-						
 					<?php
+					
 						echo createTopicLinkFor(1);
 						echo createTopicLinkFor(1);
 						echo createTopicLinkFor(1);

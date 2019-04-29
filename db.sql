@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS Compte(
 	banned BOOLEAN,
 	imgFileLink TEXT,
 	email VARCHAR(64),
+	presented BOOLEAN,
 	
 	PRIMARY KEY(idCompte)
 
@@ -44,7 +45,6 @@ CREATE TABLE IF NOT EXISTS Sujet
 
 CREATE TABLE IF NOT EXISTS SujetSuivi
 (
-	
 	idSujetSuivi INT(11) AUTO_INCREMENT NOT NULL,
 	
 	idCompte INT(11),
