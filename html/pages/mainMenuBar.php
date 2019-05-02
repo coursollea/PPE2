@@ -37,16 +37,16 @@
 			
 			<ul class = 'navleft'>
 				<li><a href = 'accueil.php'>Accueil</a></li>
-<<<<<<< HEAD
+
 				<li><a href = "../pages/se_presenter.php">Se présenter</a></li>
 				<li><a>Requête</a></li>
-=======
+
 				<?php if(isConnected())
 				{ ?>
 					<li><a>Se présenter</a></li>
 					<li><a>Requête</a></li> <?php
 				} ?>
->>>>>>> 72ff54ebe28359c2e1c0f33ebdd78e431fe02a97
+
 				<li><a href = "../pages/charte.php">Charte</a></li>
 				
 			</ul>

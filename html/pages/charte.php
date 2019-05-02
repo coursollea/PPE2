@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<?php include("mainMenuBar.php"); ?>
-=======
 <!DOCTYPE html>
 
 <?php 
@@ -16,7 +13,7 @@
 	</head>
 	
 	<body>
->>>>>>> 72ff54ebe28359c2e1c0f33ebdd78e431fe02a97
+
 	<div id= "charteContainer">
 		<div class="charteDiv2">
 			<form method="GET" action="accueil.php">
