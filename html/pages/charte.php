@@ -1,4 +1,22 @@
+<<<<<<< HEAD
 <?php include("mainMenuBar.php"); ?>
+=======
+<!DOCTYPE html>
+
+<?php 
+		include('mainMenuBar.php');
+		if(isset($_GET['deco']))
+			disconnect();?>
+
+<html>
+	<head>
+		<meta charset = 'utf-8'>
+		<title> Accueil </title>
+		<link rel='stylesheet' href='../css/style.css'>
+	</head>
+	
+	<body>
+>>>>>>> 72ff54ebe28359c2e1c0f33ebdd78e431fe02a97
 	<div id= "charteContainer">
 		<div class="charteDiv2">
 			<form method="GET" action="accueil.php">
