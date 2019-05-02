@@ -29,7 +29,7 @@
 						</ul>
 					</li> 
 					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
-					<li><a> Notifications </a></li><?php
+					<li><a> Notifications </a></li> <?php
 				}?>
 				
 				
@@ -37,9 +37,13 @@
 			
 			<ul class = 'navleft'>
 				<li><a href = 'accueil.php'>Accueil</a></li>
-				<li><a>Se présenter</a></li>
-				<li><a>Requête</a></li>
+				<?php if(isConnected())
+				{ ?>
+					<li><a>Se présenter</a></li>
+					<li><a>Requête</a></li> <?php
+				} ?>
 				<li><a href = "../pages/charte.php">Charte</a></li>
+				
 			</ul>
 			
 			<div>

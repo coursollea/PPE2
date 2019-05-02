@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<?php include('../tools/dbFunctions.php');
-		session_start();
+<?php 
+		include('mainMenuBar.php');
 		if(isset($_GET['deco']))
 			disconnect();?>
 

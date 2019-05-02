@@ -1,5 +1,6 @@
 <?php
 include('dbFunctions.php');
+
 function LocalisePage($nomPage)
 	{
 		$bdd = createPDO();
