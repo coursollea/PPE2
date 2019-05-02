@@ -296,6 +296,7 @@
 
 	}
 	
+<<<<<<< HEAD
 	function accountRecuperation($id)
 	{
 		$bdd = createPDO();
@@ -303,6 +304,33 @@
 		$donnee = $reponse->fetch(); 
 		return $donnee["imgFileLink"]; 
 	}
+=======
+	function getSujetOfCategory($idCategory)
+	{
+		$bdd = createPDO();
+		$reponse = $bdd->query('SELECT * Sujet WHERE idCategorie = '.$idCategory.');');
+		$return = $reponse->fetchAll(PDO::FETCH_ASSOC);
+		
+		return $return;
+	}
+	
+	function createTopicLinkGroup($sujetArray)
+	{
+		$bdd = createPDO();
+		$array = Array();
+		
+		foreach($sujetArray AS $line)
+		{
+			$array[] = createTopicLinkFor($line['idSujet']);
+		}
+		
+		return $array;
+		
+	}
+	
+	
+
+>>>>>>> 38ce2dfcb1c2382b8559e7b73758280f07587784
 	 ?>
 	
 

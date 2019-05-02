@@ -1,17 +1,16 @@
 <?php 
 include('dbFunctions.php');
 
-function getCategorie()
+	//$_POST['text'];
+	$bdd = createPDO();
+	$reponse = $bdd->query('SELECT DISTINCT * FROM sujet INNER JOIN categorie WHERE sujet.idCategorie in(select idCategorie from categorie where nomCategorie='.$_POST['text'].')');
+	$tab = Array();
+	
+	while($data = $reponse->fetch())
 	{
-		$bdd = createPDO();
-		$reponse = $bdd->query('SELECT DISTINCT * FROM categorie ');
-		$tab = Array();
-		
-		while($data = $reponse->fetch())
-		{
-			$tab[]=$data;
-		}
-		return $tab;
+		$tab[]=$data;
 	}
+	
+	echo json_encode($tab);
 
 ?>
