@@ -295,6 +295,31 @@
 		return $tab;
 
 	}
+	
+	function getSujetOfCategory($idCategory)
+	{
+		$bdd = createPDO();
+		$reponse = $bdd->query('SELECT * Sujet WHERE idCategorie = '.$idCategory.');');
+		$return = $reponse->fetchAll(PDO::FETCH_ASSOC);
+		
+		return $return;
+	}
+	
+	function createTopicLinkGroup($sujetArray)
+	{
+		$bdd = createPDO();
+		$array = Array();
+		
+		foreach($sujetArray AS $line)
+		{
+			$array[] = createTopicLinkFor($line['idSujet']);
+		}
+		
+		return $array;
+		
+	}
+	
+	
 
 	 ?>
 	

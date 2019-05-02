@@ -22,7 +22,7 @@
 				}
 				else 
 				{?>
-					<li><a><?php echo $_SESSION['username'];?> ▼</a>
+					<li><a><?php echo $_SESSION['username'];?> ▼ </a>
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnexion</a></li>
 							<li><a id="compteLink">Mon compte</a></li>
@@ -77,7 +77,7 @@
 						<li><a href='pageWeb.php?categorie=Comédie'> Comédie </a></li>
 						<li><a href='pageWeb.php?categorie=Dramatique'> Dramatique </a></li>
 						<li><a href='pageWeb.php?categorie=Animé'> Animé </a></li>
-						<li><a href='https://www.dorcelstore.com/fr'> Porno </a></li>
+						<li><a href='pageWeb.php?categorie=Porno'> Porno </a></li>
 					</ul>
 				</li>
 				<li><a> Développement ▼</a>
