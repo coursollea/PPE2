@@ -8,7 +8,8 @@ $(".categorie").on ('change', function(){
 	$.ajax({
 	type: 'POST',
 	url: 'créationjs.php',
-	data: 'id=' + $(this).attr("id"),
+	data: 'text=' + $(this).val(),
+	dataType: json,
 	success: function(code_html)
 	{
 		$(this).val(code_html)
@@ -17,7 +18,7 @@ $(".categorie").on ('change', function(){
 		
 		
 	}
-});
+	});
 	
 	
 });
