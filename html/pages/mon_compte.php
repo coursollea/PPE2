@@ -7,7 +7,7 @@
 		<input type="file" name="image"/></br>
 		<input type="password" name="mdp"/></br>
 		<input type="password" name="remdp"/></br>
-		<input type="submit" value="Save" class="moncompte-submit">
+		<input type="submit" value="Sauvegarder" class="moncompte-submit">
 		
 	</form>
 <?php

@@ -295,7 +295,14 @@
 		return $tab;
 
 	}
-
+	
+	function accountRecuperation($id)
+	{
+		$bdd = createPDO();
+		$reponse = $bdd->query("SELECT imgFileLink FROM Compte WHERE idCompte = " .$id); 
+		$donnee = $reponse->fetch(); 
+		return $donnee["imgFileLink"]; 
+	}
 	 ?>
 	
 

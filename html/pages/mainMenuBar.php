@@ -22,9 +22,9 @@
 				}
 				else 
 				{?>
-					<li><a><?php echo $_SESSION['username'];?> ▼</a>
+					<li><a><?php echo $_SESSION['username'];?> <img src= <?php echo accountRecuperation($_SESSION["idCompte"])?>> </a>
 						<ul>
-							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnexion</a></li>
+							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnection</a></li>
 							<li><a id="compteLink">Mon compte</a></li>
 						</ul>
 					</li> 

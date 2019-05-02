@@ -10,7 +10,7 @@ $('#compteLink').on('click', function(){
 			'<input type = "password" name = "password" class = "form-inputtext-compte" placeholder = "Mot de passe" required><br/>'+
 			'<input type = "password" name = "confirPassword" class = "form-inputtext-compte" placeholder = "Confirmer le mot de passe" required><br/>'+
 			'<input type="file" name="imgLink" class = "form-inputtext-compte"/>'+
-			'<input type = "submit" value = "Save" class="moncompte-submit">'+
+			'<input type = "submit" value = "Sauvagarder" class="moncompte-submit">'+
 			'<input type = "button" value = "Annuler" id = "cancelButton" class="moncompte-submit">'+
 		'</form>'+		
 	'</div>'	
