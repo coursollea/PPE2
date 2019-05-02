@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-
-<?php include('../tools/dbFunctions.php');
-		session_start();
-		if(isset($_GET['deco']))
-			disconnect();?>
-
-<html>
-	<head>
-		<meta charset = 'utf-8'>
-		<title> Accueil </title>
-		<link rel='stylesheet' href='../css/style.css'>
-	</head>
-	
-	<body>
+<?php include("mainMenuBar.php"); ?>
 	<div id= "charteContainer">
 		<div class="charteDiv2">
 			<form method="GET" action="accueil.php">

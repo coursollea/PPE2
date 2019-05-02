@@ -25,7 +25,11 @@
 						else if(isset($_GET['msg']))
 							echo redirectMessage($_GET['msg']);
 
-					
+		
+			if (isset($_POST['name']))
+			{
+				echo $_POST['name'];
+			}
 		?>
 				
 </article>

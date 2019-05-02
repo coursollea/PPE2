@@ -37,7 +37,7 @@
 			
 			<ul class = 'navleft'>
 				<li><a href = 'accueil.php'>Accueil</a></li>
-				<li><a>Se présenter</a></li>
+				<li><a href = "../pages/se_presenter.php">Se présenter</a></li>
 				<li><a>Requête</a></li>
 				<li><a href = "../pages/charte.php">Charte</a></li>
 			</ul>
