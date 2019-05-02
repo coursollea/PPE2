@@ -13,6 +13,7 @@
 	</head>
 	
 	<body>
+
 	<div id= "charteContainer">
 		<div class="charteDiv2">
 			<form method="GET" action="accueil.php">

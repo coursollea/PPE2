@@ -788,3 +788,58 @@ input:-webkit-autofill:active  {
 	font-weight: bold; 
 	text-decoration: underline; 
 }
+
+#presenterContainer
+{
+	height: 100%;
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+}
+
+.presenterDiv
+{
+	align-items: center; 
+	text-align: center;  
+	background:  #f4eee8 ; 
+	box-shadow: 1px 2px 2px black; 
+	overflow : auto;
+	margin-bottom : 10px;
+	text-align : left;
+	width : 85%;
+	max-width : 85%;
+	padding : 30px 30px;
+	margin-left : auto;
+	margin-right : auto;
+	border-radius : 25px;
+	border : 3px solid gray;
+	color : gray;
+}
+
+.presenterPseudo
+{
+	text-align: center; 
+	align-items: center; 
+	justify-content: center; 
+	font-family: Castellar; 
+	font-size: 50px; 
+	padding : 15px 30px; 
+}
+
+.button_valid_presenter
+{
+	height: 100px; 
+	width: 100px; 
+	border-radius: 50%; 
+	background: red; 
+	box-shadow: 1px 5px 2px black; 
+}
+
+.description_presenter
+{
+	text-align: left; 
+	align-items: center;
+	font-size: 20px; 
+	padding : 10px 20px; 
+	font-family: Arial; 
+}

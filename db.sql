@@ -12,8 +12,12 @@ CREATE TABLE IF NOT EXISTS Compte(
 	banned BOOLEAN,
 	imgFileLink TEXT,
 	email VARCHAR(64),
+<<<<<<< HEAD
+	presented boolean, 
+=======
 	presented BOOLEAN,
 	
+>>>>>>> 72ff54ebe28359c2e1c0f33ebdd78e431fe02a97
 	PRIMARY KEY(idCompte)
 
 )ENGINE = innodb;
