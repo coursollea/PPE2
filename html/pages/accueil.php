@@ -15,7 +15,7 @@
 
 						if(isset($_POST['modification_compte']))
 						{
-							modifyAccount($_POST['username2'], $_POST['password'], $_FILE['imgLink']);
+							modifyAccount($_POST['username2'], $_POST['password'], $_FILES['imgLink']);
 							echo redirectMessage($_POST['msg']);
 						}
 						else if(isset($_GET['msg']))

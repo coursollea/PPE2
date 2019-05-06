@@ -24,15 +24,15 @@
 				{?>
 					<li><a><?php echo $_SESSION['username'];?> <img class="taille_image"src= <?php echo accountRecuperation($_SESSION["idCompte"])?>> </a> 
 					
-					<li><a><?php echo $_SESSION['username'];?> ▼ </a> 
+					<!--<li><a><?php echo $_SESSION['username'];?> ▼ </a> -->
 
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnection</a></li>
 							<li><a id="compteLink">Mon compte</a></li>
 						</ul>
 					</li> 
-					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
-					<li><a> Notifications </a></li> <?php 
+					<!--<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
+					<li><a> Notifications </a></li> --> <?php 
 				}?> 
 				
 				
@@ -46,8 +46,8 @@
 
 				<?php if(isConnected())
 				{ ?>
-					<li><a>Se présenter</a></li>
-					<li><a>Requête</a></li> <?php
+					<!--<li><a>Se présenter</a></li>
+					<li><a>Requête</a></li> --> <?php
 				} ?>
 
 				<li><a href = "../pages/charte.php">Charte</a></li>

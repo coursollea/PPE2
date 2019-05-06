@@ -268,14 +268,16 @@
 	function modifyAccount($username, $mdp, $imgLink)
 	{
 		
-		$array = Array();
+		$array = array();
 		$array[] = $username;
 		$array[] = $mdp;
 		$array[] = $imgLink;
+		$link = "../../avatar/".$imgLink['name'];
 		
 		$bdd = createPDO();
+		move_uploaded_file($imgLink['tmp_name'], $link);
 		
-		$query = 'UPDATE Compte SET username = "'.$username.'", password = "'.$mdp.'", imgFileLink = "'.$imgLink.'" WHERE idCompte = '.$_SESSION['idCompte'].';';
+		$query = 'UPDATE Compte SET username = "'.$username.'", password = "'.$mdp.'", imgFileLink = "'.$link.'" WHERE idCompte = '.$_SESSION['idCompte'].';';
 		$bdd->query($query);
 		
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
