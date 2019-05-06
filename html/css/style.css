@@ -843,3 +843,9 @@ input:-webkit-autofill:active  {
 	padding : 10px 20px; 
 	font-family: Arial; 
 }
+
+.taille_image
+{
+	width: 20px; 
+	height: 20px; 
+}

@@ -19,7 +19,7 @@
 				<p class="presenterPseudo">
 					<?php  echo $_SESSION['username']; ?>
 					<div class= "description_presenter">
-						<textarea style="resize:none" name="description"  rows="10" cols="100" placeholder="Votre description pour vous présenter!"> </textarea>
+						<textarea style="resize:none" name="description"  rows="10" cols="100" placeholder="Votre description pour vous présentez!"> </textarea>
 						<button class="button_valid_presenter"> N'appuie pas le boutton rouge </button>
 					</div>
 				</p>

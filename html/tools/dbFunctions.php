@@ -281,7 +281,6 @@
 		$_SESSION['username'] = getUserNameOf($_SESSION['idCompte']);
 	}
 
-
 	function getTheme()
 	{
 		$bdd = createPDO();
@@ -296,7 +295,6 @@
 
 	}
 	
-<<<<<<< HEAD
 	function accountRecuperation($id)
 	{
 		$bdd = createPDO();
@@ -304,7 +302,7 @@
 		$donnee = $reponse->fetch(); 
 		return $donnee["imgFileLink"]; 
 	}
-=======
+
 	function getSujetOfCategory($idCategory)
 	{
 		$bdd = createPDO();
@@ -328,9 +326,6 @@
 		
 	}
 	
-	
-
->>>>>>> 38ce2dfcb1c2382b8559e7b73758280f07587784
 	 ?>
 	
 

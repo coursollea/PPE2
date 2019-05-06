@@ -22,19 +22,18 @@
 				}
 				else 
 				{?>
-<<<<<<< HEAD
-					<li><a><?php echo $_SESSION['username'];?> <img src= <?php echo accountRecuperation($_SESSION["idCompte"])?>> </a>
-=======
-					<li><a><?php echo $_SESSION['username'];?> ▼ </a>
->>>>>>> 38ce2dfcb1c2382b8559e7b73758280f07587784
+					<li><a><?php echo $_SESSION['username'];?> <img class="taille_image"src= <?php echo accountRecuperation($_SESSION["idCompte"])?>> </a> 
+					
+					<li><a><?php echo $_SESSION['username'];?> ▼ </a> 
+
 						<ul>
 							<li><a href = 'accueil.php?deco=1' id = 'deconnexionLink'>Déconnection</a></li>
 							<li><a id="compteLink">Mon compte</a></li>
 						</ul>
 					</li> 
 					<li><a> Messagerie <?php echo displayMessageNumber()?></a></li>
-					<li><a> Notifications </a></li> <?php
-				}?>
+					<li><a> Notifications </a></li> <?php 
+				}?> 
 				
 				
 			</ul>
