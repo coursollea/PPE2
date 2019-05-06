@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS baseSite;
-USE baseSite;
+CREATE DATABASE IF NOT EXISTS PPE02;
+USE PPE02;
 
 CREATE TABLE IF NOT EXISTS Compte(
 
@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS Compte(
 	banned BOOLEAN,
 	imgFileLink TEXT,
 	email VARCHAR(64),
-	presented boolean, 
 	presented BOOLEAN,
 	PRIMARY KEY(idCompte)
 
