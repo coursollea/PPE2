@@ -499,7 +499,7 @@ article div
 {
 	font-family : Arial, sans-serif;
 	width : 400px;
-	height : 450px;
+	height : 558px;
 	background : url('../../img/connect.jpeg') no-repeat;
 	color : white;
 	
@@ -714,7 +714,6 @@ input:-webkit-autofill:active  {
 .form-inputtext-compte 
 {
 	width : 75%;
-	position : relative;
 	top : 30px;
 	padding : 10px 20px;
 	outline : none;
@@ -848,4 +847,18 @@ input:-webkit-autofill:active  {
 {
 	width: 20px; 
 	height: 20px; 
+}
+
+#avatar_preview
+{
+	width: 100px; 
+	height: 100px;
+	
+}
+
+.container_avatar
+{
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
 }
